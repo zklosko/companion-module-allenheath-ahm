@@ -462,6 +462,11 @@ class AHMInstance extends InstanceBase {
 				return
 			}
 		}
+
+		if (data[0] === 0xB0 && data[3] === 0xC0) {
+			// first value of hex:B0 and third value of hex:C0 means preset recall data
+			return
+		}
 	}
 
 	/**
